@@ -1,0 +1,51 @@
+<section >
+  <div class="row">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <div style="background-color: #4867b6;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+                ">
+            <p style="font-size: 50px ; margin: auto ;">REGISTRATION</p></div>
+          <form  (submit)="makeRegistration()" >
+            <div class="mb-3">
+              <label for="firstname" class="form-label">firstname</label>
+              <input type="text" class="form-control" id="firstname"  [(ngModel)]="registerForm.firstname"  placeholder="firstname" required>
+            </div>
+            <div class="mb-3">
+              <label for="lastname" class="form-label">lastname</label>
+              <input type="text" class="form-control" id="lastname"  [(ngModel)]="registerForm.lastname"  placeholder="lastname" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">email</label>
+              <input type="text" class="form-control" id="email"    [(ngModel)]="registerForm.email"  placeholder="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">password account</label>
+              <input type="password" class="form-control" id="password"  [(ngModel)]="registerForm.password"    placeholder="password" required>
+            </div>
+
+
+            <p > Choisir une matiere</p>
+            <select name="state" class="form-select" aria-label="Default select example" [(ngModel)] = " registerForm.role" style="margin-bottom: 20px">
+              <option  *ngFor="let  matiere of listMatieres" [value]="matiere" >
+                {{ matiere }}
+              </option>
+            </select>
+            <div>
+              <button  routerLinkActive="active" style="margin-top: 18px" class="btn btn-primary"   type="submit" >REGISTER</button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
