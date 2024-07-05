@@ -13,30 +13,25 @@
           <form  (submit)="makeRegistration()" >
             <div class="mb-3">
               <label for="firstname" class="form-label">firstname</label>
-              <input type="text" class="form-control" id="firstname"  [(ngModel)]="registerForm.firstname"  placeholder="firstname" required>
+              <input type="text" class="form-control" id="firstname"  [(ngModel)]="registerForm.firstname" [ngModelOptions]="{standalone: true} " name="firstname" placeholder="firstname" required>
             </div>
             <div class="mb-3">
               <label for="lastname" class="form-label">lastname</label>
-              <input type="text" class="form-control" id="lastname"  [(ngModel)]="registerForm.lastname"  placeholder="lastname" required>
+              <input type="text" class="form-control" id="lastname"  [(ngModel)]="registerForm.lastname" name="lastname" placeholder="lastname" required>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">email</label>
-              <input type="text" class="form-control" id="email"    [(ngModel)]="registerForm.email"  placeholder="email" required>
+              <input type="text" class="form-control" id="email"    [(ngModel)]="registerForm.email" name="email" placeholder="email" required>
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">password account</label>
-              <input type="password" class="form-control" id="password"  [(ngModel)]="registerForm.password"    placeholder="password" required>
+              <input type="password" class="form-control" id="password"  [(ngModel)]="registerForm.password"  name="password"   placeholder="password" required>
             </div>
 
 
-            <p > Choisir une matiere</p>
-            <select name="state" class="form-select" aria-label="Default select example" [(ngModel)] = " registerForm.role" style="margin-bottom: 20px">
-              <option  *ngFor="let  matiere of listMatieres" [value]="matiere" >
-                {{ matiere }}
-              </option>
-            </select>
+
             <div>
-              <button  routerLinkActive="active" style="margin-top: 18px" class="btn btn-primary"   type="submit" >REGISTER</button>
+              <button  routerLinkActive="active" style="margin-top: 18px ; background-color: #4867b6" class="btn "    type="submit" >REGISTER</button>
             </div>
 
           </form>

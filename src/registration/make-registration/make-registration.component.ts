@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormsModule} from "@angular/forms";
 import {RouterLinkActive} from "@angular/router";
 import {NgForOf} from "@angular/common";
-import {MakeRegistrationService} from "../make-registration.service";
+import {MakeRegistrationService} from "./make-registration.service";
 
 @Component({
   selector: 'app-make-registration',
@@ -18,7 +18,7 @@ import {MakeRegistrationService} from "../make-registration.service";
 export class MakeRegistrationComponent implements  OnInit{
 
   public registerForm! :  any
-  listMatieres!: ["USER" , "ADMIN" , "MANAGER" ];
+  listRoles!: ["USER" , "ADMIN" , "MANAGER" ];
 
 
 
@@ -29,6 +29,7 @@ export class MakeRegistrationComponent implements  OnInit{
 
   ngOnInit(): void {
   this.registerForm  = {firstname  : "my_firstname" , lastname : "my_lastname" , email : "my_email" , password: "0000000"  , role : ""};
+
   }
 
   makeRegistration(){
