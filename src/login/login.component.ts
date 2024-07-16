@@ -16,10 +16,10 @@ import {LoginService} from "./login.service";
 export class LoginComponent  implements OnInit{
 
 
-  public loginForm!: {username: string, password: string};
+  public loginForm!: {email: string, password: string};
 
   ngOnInit(): void {
-    this.loginForm  = {  username : "my_username", password: "my_password"  };
+    this.loginForm  = {  email : "my_username", password: "my_password"  };
   }
 
   constructor(

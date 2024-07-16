@@ -9,16 +9,16 @@
             justify-content: center;
 
                 ">
-            <p style="font-size: 50px ; margin: auto ;">LOGIN</p></div>
+            <p style="font-size: 50px ; margin: auto ; color:white">LOGIN</p></div>
           <form   (submit)="LoginFunction()" >
 
             <div class="mb-3">
               <label for="email" class="form-label">email</label>
-              <input type="text" class="form-control" id="email" [ngModel]="loginForm.username"   name="email" placeholder="email" required>
+              <input type="text" class="form-control" id="email" [(ngModel)]="loginForm.email"   name="email" placeholder="email" required>
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">password account</label>
-              <input type="password" class="form-control" id="password"  [ngModel]="loginForm.password"    name="password"   placeholder="password" required>
+              <input type="password" class="form-control" id="password"  [(ngModel)]="loginForm.password"    name="password"   placeholder="password" required>
             </div>
 
             <div>

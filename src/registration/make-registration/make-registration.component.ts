@@ -17,7 +17,7 @@ import {MakeRegistrationService} from "./make-registration.service";
 })
 export class MakeRegistrationComponent implements  OnInit{
 
-  public registerForm! :  any
+  public registerForm  = {firstname  : "" , lastname : "" , email : "" , password: ""  , role : "USER"};
   listRoles!: ["USER" , "ADMIN" , "MANAGER" ];
 
 
@@ -28,12 +28,13 @@ export class MakeRegistrationComponent implements  OnInit{
     }
 
   ngOnInit(): void {
-  this.registerForm  = {firstname  : "my_firstname" , lastname : "my_lastname" , email : "my_email" , password: "0000000"  , role : ""};
+
 
   }
 
   makeRegistration(){
       console.log(this.registerForm)
+      console.log(this.registerForm.role)
       this.service.registration(this.registerForm).subscribe(res => {
         console.log(res);
       });
